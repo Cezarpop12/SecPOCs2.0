@@ -2,15 +2,17 @@ name: CI - Backend
 
 on:
   push:
-    branches: [ "main" ]
+    branches:
+      - '**'          # ⬅️ alle branches, dus ook je feature-branch zoals deploytest
   pull_request:
-    branches: [ "main" ]
+    branches:
+      - 'main'
 
 jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      contents: read  # Least privilege GITHUB_TOKEN (AC-22)
+      contents: read
 
     steps:
       - name: Checkout code
@@ -32,7 +34,6 @@ jobs:
           dotnet list ./SecPOCs2.0/SecPOCs2.0.vbproj package --vulnerable > sca-report.txt
           echo "----- Vulnerability report -----"
           cat sca-report.txt
-          # Fail if High or Critical vulnerabilities found
           if grep -E "High|Critical" sca-report.txt; then
             echo "High or Critical vulnerabilities found. Failing build."
             exit 1
@@ -47,7 +48,7 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
-    # Alleen bij push naar main
+    # Alleen deployen bij push naar main
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     environment: production
     permissions:

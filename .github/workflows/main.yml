@@ -29,13 +29,13 @@ jobs:
 
       - name: Dependency scan
         run: |
-          dotnet list SecPOCs2.0.vbproj package --vulnerable > sca-report.txt || true
+          dotnet list ./SecPOCs2.0/SecPOCs2.0.vbproj package --vulnerable > sca-report.txt
           echo "----- Vulnerability report -----"
           cat sca-report.txt
           # Fail if High or Critical vulnerabilities found
           if grep -E "High|Critical" sca-report.txt; then
-            echo "High or Critical vulnerabilities found. Failing build."
-            exit 1
+           echo "High or Critical vulnerabilities found. Failing build."
+          exit 1
           fi
       - name: Upload dependency scan report
         uses: actions/upload-artifact@v4

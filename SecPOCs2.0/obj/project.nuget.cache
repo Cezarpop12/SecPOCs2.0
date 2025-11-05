@@ -1,23 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QhJ9xYVssGo=",
+  "dgSpecHash": "e3p3015Z6M0=",
   "success": true,
   "projectFilePath": "C:\\SecPOCs2.0\\SecPOCs2.0\\SecPOCs2.0.vbproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\mrcha\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
-  ],
-  "logs": [
-    {
-      "code": "NU1903",
-      "level": "Warning",
-      "message": "Package 'Newtonsoft.Json' 12.0.3 has a known high severity vulnerability, https://github.com/advisories/GHSA-5crp-9r3c-p9vr",
-      "projectPath": "C:\\SecPOCs2.0\\SecPOCs2.0\\SecPOCs2.0.vbproj",
-      "warningLevel": 1,
-      "filePath": "C:\\SecPOCs2.0\\SecPOCs2.0\\SecPOCs2.0.vbproj",
-      "libraryId": "Newtonsoft.Json",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    }
-  ]
+  "expectedPackageFiles": [],
+  "logs": []
 }

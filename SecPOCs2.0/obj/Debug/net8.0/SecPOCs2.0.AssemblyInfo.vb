@@ -16,7 +16,7 @@ Imports System.Reflection
 <Assembly: System.Reflection.AssemblyCompanyAttribute("SecPOCs2.0"),  _
  Assembly: System.Reflection.AssemblyConfigurationAttribute("Debug"),  _
  Assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0"),  _
- Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4e5fc96d3a718116cb531bd91dba1e067d382a4d"),  _
+ Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aeb84936e58b4fba9b4fc58f10095596f7b38642"),  _
  Assembly: System.Reflection.AssemblyProductAttribute("SecPOCs2.0"),  _
  Assembly: System.Reflection.AssemblyTitleAttribute("SecPOCs2.0"),  _
  Assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")> 
